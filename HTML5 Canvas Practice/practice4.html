@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Practice 4</title>
+</head>
+<body>
+    <canvas id="canvas" width="1525" height="820"></canvas>
+
+
+    <script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        ctx.save();
+        // rotating in radians π/4 = 45°
+        ctx.rotate(Math.PI / 4);
+        // rotating in degrees 45° = π/4
+        /* ctx.rotate((Math.PI / 180) * 45); */
+        // determines the color of the arc as orange
+        ctx.fillStyle = 'orange';
+        // draws circle
+        ctx.arc(550, 25, 80, 0, 2 * Math.PI);
+        // fills the arc with the fillStyle
+        ctx.fill();
+        // fills/creates the shape
+        ctx.stroke();  
+        // restores to the save point
+        ctx.restore();
+        ctx.fillStyle = 'green';
+        ctx.rotate(Math.PI / 4);      
+        ctx.fillRect(850, 0, 100, 50);
+        ctx.stroke();
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Practice 3</title>
+</head>
+<body>
+    <canvas id="canvas" width="1525" height="820"></canvas>
+
+    <script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(150, 150);
+        ctx.lineTo(450, 450);
+        ctx.strokeStyle = 'green';
+        ctx.lineWidth = 10;
+        ctx.stroke();        
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Practice 7</title>
+</head>
+<body>
+    <canvas id="canvas" width="1525" height="820"></canvas>
+
+    <script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        ctx.save();
+        // head
+        ctx.fillStyle = 'yellow';
+        ctx.strokeStyle = 'transparent';
+        ctx.arc(404, 150, 80, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.restore();
+        // body
+        ctx.strokeStyle = 'transparent';
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(360, 230, 90, 150);
+        // mouth
+        ctx.restore();
+        ctx.beginPath();
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 3;
+        ctx.moveTo(375, 180);
+        ctx.lineTo(430, 180);
+        ctx.stroke();
+        ctx.restore();
+        // left arm
+        ctx.beginPath();
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 3;
+        ctx.moveTo(360, 285);
+        ctx.lineTo(315, 285);
+        ctx.stroke();
+        ctx.restore();
+        // right arm
+        ctx.beginPath();
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 3;
+        ctx.moveTo(450, 285);
+        ctx.lineTo(495, 285);
+        ctx.stroke();
+        ctx.restore();
+        // left eye 
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(375, 140, 9, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+        // right eye 
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(425, 140, 9, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+        // left leg
+        ctx.fillStyle = 'red';
+        ctx.fillRect(380, 380, 20, 40);
+        ctx.stroke();
+        ctx.restore();
+        // right leg
+        ctx.fillStyle = 'red';
+        ctx.fillRect(410, 380, 20, 40);
+        ctx.stroke();
+        ctx.restore();
+    </script>
+</body>
+</html>

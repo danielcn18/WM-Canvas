@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Practice 5</title>
+</head>
+<body>
+    <canvas id="canvas" width="1525" height="820"></canvas>
+
+    <script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        ctx.save();
+        ctx.fillRect(50, 50, 100, 100);
+        ctx.stroke();
+        ctx.restore();
+        ctx.fillRect(0, 0, 100, 100);
+        ctx.translate(200, 0);
+        ctx.stroke();
+        ctx.restore();
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, 0, 100, 100);
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>

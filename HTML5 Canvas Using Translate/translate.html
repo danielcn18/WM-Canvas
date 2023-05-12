@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Translating</title>
+</head>
+<body>
+    <canvas id="canvas" width="1525" height="820"></canvas>
+
+    <script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        document.body.style.backgroundColor = 'black'
+        for(let i = 0; i < 30; i++){
+            // 'save()' is basically a save point that 'restore()' can call to go back to the settings & styles that the latest 'save()' had at that time
+            ctx.save();
+            // fillStyle is filling the style of color for the object, which can be rgb(r, g, b)
+            ctx.fillStyle = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+            // 'translate(x, y)' moves the object horizontally and vertically 
+            ctx.translate(i * 48, i * 18);
+            // transform(a, b, c, d, e, f)
+            // (a) is Horizonal Scaling, use '1' as the default
+            // (b) is Vertical Skewing
+            // (c) is Horizonal Skewing 
+            // (d) is Vertical Scaling, use '1' as the default
+            // (e) is Horizontal Translation
+            // (f) is Vertical Translation
+            ctx.transform(1, 3, 1, 1, 0, 0);
+            // draw rectangle
+            // fillRect(x, y, width, height) 
+            ctx.fillRect(0, 0, 40, 40); 
+            // restore calls back onto the latest 'save()' settings/style   
+            ctx.restore();        
+        }
+    </script>
+</body>
+</html>
